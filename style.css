@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&family=Pacifico&family=Sora:wght@300;400&display=swap");
+
+* {
+  /*  margin: 0; */
+}
+/* body{
+    background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+height: 100vh;/* gradient.io dan arkaplanı aldım ve tekrar etmemesi için 100vh yükseklik verdim. */
+body {
+  font-family: "Coming Soon", cursive;
+
+  font-family: "Sora", sans-serif;
+}
+
+.languages {
+  /* ul.languages dersem clası languages olan ul leri al demek oluyor. Eğer ul .languages deseydik ul nin içindeki clası languages olan ları al demek olurdu. */
+  /* border:2px solid red ;  */
+  /* padding: 0; */
+  /* madde imi stilleri */
+  list-style-type: none; /* hiçbirşey gözükmez. */
+  list-style-type: square;
+  list-style-type: circle;
+  list-style-type: georgian;
+  list-style-type: lower-alpha;
+  list-style-type: lower-greek;
+  list-style-type: decimal;
+  list-style-type: disc; /* default olarak gelir. */
+  list-style-position: outside; /* default olarak outside geliyor. */
+  list-style-position: inside;
+  list-style-image: url(./img/dog-solid.svg); /* list style image ile ikonu css de kullana biliyoruz. */
+  color: red;
+}
+/* unli lerde padding 0 verince listenin başındakiyuvarlaklardan kurtuluyorum. */
+h2 {
+  color: purple;
+}
+h2 i {
+  color: aqua;
+}
+ul.languages li {
+  background-color: greenyellow;
+  margin: 5px;
+  width: 250px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border: 1px solid red;
+  border-left: 5px solid gray;
+  font-family: "Pacifico", cursive;
+}
+
+ul.languages li::before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(./img/igloo-solid.svg);
+    margin-right: 10px;
+    padding-right: 5px;
+    background-color: red;
+}
+
+ul.languages li:hover {
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+  cursor: pointer;
+  font-family: "Sora", sans-serif;
+} /* cursor pointer el işareti çıkarıyor. opacity saydamlık veriyor ve biz bunların hepsini hover ı ekleyerek yaptık. */
+ul.pseudo li:first-child {
+  /* bunu yazdığımda pseudo class ındaki ul içindeki li lerin 1. elemanını seçmiş oldum. */
+  color: red;
+}
+ul.pseudo li:last-child {
+  /* bunu yazdığımda pseudo class ındaki ul içindeki li lerin son elemanını seçmiş oldum. */
+  color: blue;
+  font-family: "Bitter", serif;
+}
+ul.pseudo li:nth-child(3) {
+  /* bunu yazdığımda pseudo class ındaki ul içindeki li lerin numarasın yazarak  elemanını seçmiş oldum. */
+  color: green;
+  font-family: "Bitter", serif;
+}
+ul.pseudo li:nth-child(5) {
+  /* bunu yazdığımda pseudo class ındaki ul içindeki li lerin numarasın yazarak  elemanını seçmiş oldum. */
+  color: fuchsia;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style-type: none;
+  font-size: 40px;
+}
+ul.pseudo li:nth-child(odd) {
+  /*  color: aqua;
+    font-size: x-large; */
+  /* bunu yazdığımda pseudo class ındaki ul içindeki li lerin odd yazarak tek lerini seçmiş oldum. */
+  background-color: aqua;
+}
+ul.pseudo li:nth-child(even) {
+  /*  color: aqua;
+     font-size: x-large; */
+  /* bunu yazdığımda pseudo class ındaki ul içindeki li lerin even yazarak çift lerini seçmiş oldum. nth içine fonksiyon yazabiliyoruz. */
+  background-color: rebeccapurple;
+}
+ul.pseudo li:hover {
+  background-color: darkorange;
+  color: black;
+  font-size: 30px;
+}
+ul.pseudo li:active {
+  /* active özelliği ile üzerine tıklandığında yapılacak işlemi belirleyebiliyorum. */
+  background-color: red;
+  color: azure;
+}
+input:focus {
+  background-color: tomato;
+  color: white;
+  border: 4px dashed green;
+  /* focus ile input a tıklandığında değiştirmek istedğim durumları belirliyorum. */
+}
+nav.link a:link {
+  color: red;
+}
+nav.link a:visited {
+  color: darkcyan;
+}
+nav.link a:active {
+  color: darkred;
+}
+/* linklerde link ile tıklanmamış hali, visited ile tıklandıktan sonraki hali, active ile üzerindeykenki hali */
+nav.cw a{
+    text-decoration: none;
+    border: 2px solid darkmagenta;
+    padding: 5px;
+    color: darkmagenta;
+    border-radius: 10px;
+    background-color: gray;
+}
+nav.cw a:hover{
+    background-color: darkmagenta;
+    color: white;
+}
+/* nav.cw a i:hover{
+color: black;
+} bu şekilde yapıncada oldu. */
+nav.cw a:hover i{
+    color: black;
+}
+
+
+.p-elements::first-line{
+    color: red;
+    /* bu şekilde rengini değiştirdiğimizde sayfayı büyüttüğümde de ilk satıra gelen kısmın rengi değişir span ile yapsadım öyle olmacaktı. */
+}
+.p-elements::first-letter{
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+}
+ul.before-after{
+    list-style-type: none;
+}
+ul.before-after li{
+    background-color: bisque;
+    margin: 0.5rem;
+    width: 40%;
+    border-radius: 10px;
+    /* padding-left: ; */
+   /*  text-align: center;
+    margin: 10px auto; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+ul.before-after li::before{
+    content: "🏁" ;
+    margin: 10px;
+}
+ul.before-after li:nth-child(2)::after{
+    content: "🚀" ;
+    margin: 10px;
+}
